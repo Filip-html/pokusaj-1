@@ -1,0 +1,283 @@
+/* =========================
+   OSNOVNO
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b0b14;
+    color: white;
+    line-height: 1.6;
+}
+
+/* =========================
+   NAVIGACIJA
+========================= */
+
+nav {
+    background-color: #111122;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #00ffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(
+        135deg,
+        #0b0b14,
+        #18113a,
+        #0b0b14
+    );
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: #00ffff;
+    text-shadow: 0 0 15px #00ffff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #dddddd;
+}
+
+.button {
+    display: inline-block;
+    background-color: #ff00cc;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 15px #ff00cc;
+}
+
+.button:hover {
+    transform: scale(1.08);
+    background-color: #00ffff;
+    color: #0b0b14;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+/* =========================
+   IZVOĐAČI
+========================= */
+
+.artists {
+    padding: 70px 30px;
+    text-align: center;
+}
+
+.artists h2 {
+    font-size: 35px;
+    color: #ff00cc;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #ff00cc;
+}
+
+.card-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* KARTICA IZVOĐAČA */
+
+.artist-card {
+    background-color: #151526;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #333355;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.artist-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ffff;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+.artist-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.artist-card h3 {
+    color: #00ffff;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.artist-card p {
+    color: #cccccc;
+    font-size: 15px;
+}
+
+/* =========================
+   ULAZNICE
+========================= */
+
+.tickets {
+    padding: 70px 30px;
+    text-align: center;
+    background-color: #10101f;
+}
+
+.tickets h2 {
+    font-size: 35px;
+    color: #00ffff;
+    margin-bottom: 40px;
+}
+
+.ticket-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.ticket {
+    background-color: #19192b;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #333355;
+}
+
+.ticket h3 {
+    font-size: 25px;
+    color: #ff00cc;
+    margin-bottom: 15px;
+}
+
+.ticket .price {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* VIP karta */
+
+.ticket.vip {
+    border: 2px solid #ff00cc;
+    box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
+    transform: scale(1.05);
+}
+
+/* =========================
+   O NAMA
+========================= */
+
+.about {
+    padding: 70px 30px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    color: #ff00cc;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #cccccc;
+    font-size: 18px;
+}
+
+/* =========================
+   KONTAKT
+========================= */
+
+.contact {
+    padding: 70px 30px;
+    text-align: center;
+    background-color: #10101f;
+}
+
+.contact h2 {
+    color: #00ffff;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #cccccc;
+}
+
+/* =========================
+   MOBITEL
+========================= */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket-container {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket.vip {
+        transform: none;
+    }
+}
